@@ -20,7 +20,7 @@ public class IUAutenticacion extends JFrame {
 
 	private JPanel Contenedor;
 	private JTextField textUsuario;
-	private JPasswordField textContraseña;
+	private JPasswordField textContrasena;
 
 	public static void main(String[] args) 
 	{
@@ -55,13 +55,13 @@ public class IUAutenticacion extends JFrame {
 		lblUsuario.setBounds(10, 44, 80, 14);
 		Contenedor.add(lblUsuario);
 		
-		final JLabel lblContraseña = new JLabel("Contraseña");
-		lblContraseña.setBounds(10, 78, 80, 14);
-		Contenedor.add(lblContraseña);
+		final JLabel lblContrasena = new JLabel("Contraseï¿½a");
+		lblContrasena.setBounds(10, 78, 80, 14);
+		Contenedor.add(lblContrasena);
 		
-		textContraseña = new JPasswordField();
-		textContraseña.setBounds(100, 75, 130, 20);
-		Contenedor.add(textContraseña);
+		textContrasena = new JPasswordField();
+		textContrasena.setBounds(100, 75, 130, 20);
+		Contenedor.add(textContrasena);
 		
 		textUsuario = new JTextField();
 		textUsuario.setBounds(100, 41, 130, 20);
@@ -84,7 +84,7 @@ public class IUAutenticacion extends JFrame {
 		{			
 			public void actionPerformed(ActionEvent e) 
 			{
-				if((textUsuario.getText().equals("Admin")) && (textContraseña.getText().equals("Admin")))
+				if((textUsuario.getText().equals("Admin")) && (textContrasena.getText().equals("Admin")))
 				{				
 					IUCredencial IUC = new IUCredencial(); 
 					IUC.show();
@@ -93,9 +93,9 @@ public class IUAutenticacion extends JFrame {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "Error de autenticación");
+					JOptionPane.showMessageDialog(null, "Error de autenticaciï¿½n");
 					textUsuario.setText("");
-					textContraseña.setText("");					
+					textContrasena.setText("");					
 				}
 			}
 		});

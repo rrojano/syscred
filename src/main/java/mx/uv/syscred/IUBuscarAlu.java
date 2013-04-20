@@ -60,7 +60,7 @@ public class IUBuscarAlu extends JFrame {
 		lblPruebaDatos.setBounds(226, 97, 172, 14);
 		contentPane.add(lblPruebaDatos);
 		
-		final JRadioButton rdMatricula = new JRadioButton("Por Matr�cula", true);
+		final JRadioButton rdMatricula = new JRadioButton("Por Matr�cula", true);
 		rdMatricula.setBounds(10, 22, 109, 23);
 		contentPane.add(rdMatricula);
 		
@@ -102,7 +102,7 @@ public class IUBuscarAlu extends JFrame {
 					//REALIZA BUSQUEDA POR APELLIDO
 					try 
 					{   							
-						CsvReader reader = new CsvReader("C:\\Users\\Luis Zavaleta\\Desktop\\prueba.csv");
+						CsvReader reader = new CsvReader("C:\\Users\\Luis Zavaleta\\Dropbox\\10° Semestre UV\\Taller de Integración 2\\prueba.csv");
 						
 						while (reader.readRecord())
 						{							
