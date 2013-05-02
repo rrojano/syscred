@@ -25,7 +25,10 @@ public class IUBuscarAlu extends JFrame {
 	private JTextField textTexto;
 	CsvReader reader;
 	private String e; 
-
+	private static JFrame IUCredencial;
+	
+	public String CURP;
+	
 	public static void main(String[] args) 
 	{
 		EventQueue.invokeLater(new Runnable() 
@@ -46,7 +49,7 @@ public class IUBuscarAlu extends JFrame {
 
 	
 	public IUBuscarAlu() 
-	{
+	{						
 		ButtonGroup grupo = new ButtonGroup();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -109,15 +112,16 @@ public class IUBuscarAlu extends JFrame {
 							String Nombre = reader.get(0);
 							String Apaterno = reader.get(1);
 							String Amaterno = reader.get(2);
-							String CURP = reader.get(3);
+							CURP = reader.get(3);
 							String Nseguro = reader.get(4);
 						 
 							if (Apaterno.equals(textTexto.getText()))
 							{
-								lblPruebaDatos.setText(CURP);
+								lblPruebaDatos.setText(CURP);	
 							}
 
 						}
+						
 						} catch (IOException e) 
 						{
 							e.printStackTrace();							
@@ -148,6 +152,9 @@ public class IUBuscarAlu extends JFrame {
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
+				IUCredencial jf1 = new IUCredencial();
+				jf1.setVisible(true);
+				jf1.setL(CURP);
 				dispose();
 			}
 		});

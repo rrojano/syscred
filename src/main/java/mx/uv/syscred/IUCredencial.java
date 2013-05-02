@@ -14,9 +14,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 
-public class IUCredencial extends IUAutenticacion {
+public class IUCredencial extends JFrame
+{
 
-	private JPanel contentPane;
+	private JPanel contentPane;	
+	private JLabel labelP;
 
 	public static void main(String[] args) 
 	{
@@ -69,13 +71,14 @@ public class IUCredencial extends IUAutenticacion {
 			public void actionPerformed(ActionEvent e) 
 			{
 				IUBuscarAlu IUBA = new IUBuscarAlu();
-				IUBA.show();				
+				IUBA.show();	
+				dispose();
 			}
 		});
 		btnNewButton.setBounds(34, 204, 188, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Modificar Datos Institución");
+		JButton btnNewButton_1 = new JButton("Modificar Datos Institucion");
 		btnNewButton_1.setBounds(236, 204, 188, 23);
 		contentPane.add(btnNewButton_1);
 		
@@ -87,11 +90,22 @@ public class IUCredencial extends IUAutenticacion {
 		btnNewButton_3.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
-			{
+			{				
 				dispose();
 			}
 		});
 		btnNewButton_3.setBounds(133, 239, 89, 23);
 		contentPane.add(btnNewButton_3);
+				
+		
+		labelP = new JLabel("");
+		labelP.setBounds(246,238,89,23);contentPane.add(labelP);
+		
 	}
+	
+	public void setL (String cadena)
+	{		
+		labelP.setText(cadena);		
+	}
+	
 }
