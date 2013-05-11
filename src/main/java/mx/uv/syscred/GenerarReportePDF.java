@@ -8,18 +8,19 @@ import net.sf.jasperreports.view.JasperViewer;
 
 public class GenerarReportePDF 
 {
-	static IUCredencial iucredencial;
-    public static void main(String[] args) 
+	private String nombre;
+	private String paterno;
+	private String materno;
+	private String seguro;
+    
+    public void generarReporte(String nombre, String paterno, String materno, String seguro)
     {
-    	iucredencial = new IUCredencial();
-    	String nombre =iucredencial.getNombre();
-    	String paterno =iucredencial.getPaterno();
-    	String materno =iucredencial.getMaterno();
-    	String seguro =iucredencial.getSeguro();
-        //GenerarReportePDF reporte = new GenerarReportePDF();
-        //reporte.generarReporte();
+    	this.nombre = nombre;
+    	this.paterno = paterno;
+    	this.materno = materno;
+    	this.seguro = seguro;
         ParticipantesDataSource dataSource = new ParticipantesDataSource();
-        Alumnos alumno = new Alumnos("nombre", "paterno", "materno", "seguro");
+        Alumnos alumno = new Alumnos(paterno, nombre,materno, seguro);
         dataSource.addAlumno(alumno);
         
         try
@@ -34,12 +35,6 @@ public class GenerarReportePDF
             ex.printStackTrace();
             JOptionPane.showMessageDialog(null,"Se produjo un error al leer el archivo .jasper");
         } 
-        
-    }
-    
-    public void generarReporte()
-    {
-    	
     }
 
 }

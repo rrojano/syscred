@@ -199,8 +199,12 @@ public class IUCredencial extends JFrame
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) 
 			{
+				String nombre = lblNombre.getText();
+				String paterno = lblPaterno.getText();
+				String materno = lblMaterno.getText();
+				String seguro = labelP.getText();				
 				reporte = new GenerarReportePDF();
-				reporte.generarReporte();
+				reporte.generarReporte(nombre, paterno, materno, seguro);
 			}
 		});
 		btnNewButton_2.setBounds(34, 239, 89, 23);
@@ -239,30 +243,6 @@ public class IUCredencial extends JFrame
 	{		
 			
 		lblMaterno.setText(Amaterno1);
-	}
-	
-	public String getNombre()
-	{
-		String nombre = lblNombre.getText();
-		return nombre;
-	}
-	
-	public String getPaterno()
-	{
-		String paterno = lblPaterno.getText();
-		return paterno;
-	}
-	
-	public String getMaterno()
-	{
-		String materno = lblMaterno.getText();
-		return materno;
-	}
-	
-	public String getSeguro()
-	{
-		String seguro = labelP.getText();
-		return seguro;
 	}
 }
 
