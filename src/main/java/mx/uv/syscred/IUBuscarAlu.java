@@ -1,5 +1,6 @@
 package mx.uv.syscred;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Image;
 
@@ -153,6 +154,7 @@ public class IUBuscarAlu extends JFrame
 		ImageIcon imgbutton2 = new ImageIcon("Img/cancel.png");
 		Icon imgicon2 = new ImageIcon(imgbutton2.getImage().getScaledInstance(btnCancelar.getWidth(), btnCancelar.getHeight(), Image.SCALE_DEFAULT));
 		btnCancelar.setIcon(imgicon2);
+		btnCancelar.setBackground(Color.WHITE);
 		contentPane.add(btnCancelar);
 		
 		
@@ -351,6 +353,7 @@ public class IUBuscarAlu extends JFrame
 		ImageIcon imgbutton1 = new ImageIcon("Img/lupa.png");
 		Icon imgicon1 = new ImageIcon(imgbutton1.getImage().getScaledInstance(btnBuscar.getWidth(), btnBuscar.getHeight(), Image.SCALE_DEFAULT));
 		btnBuscar.setIcon(imgicon1);
+		btnBuscar.setBackground(Color.WHITE);
 		contentPane.add(btnBuscar);
 		
 		JButton btnAgregar = new JButton("");
@@ -368,6 +371,10 @@ public class IUBuscarAlu extends JFrame
 			}
 		});
 		btnAgregar.setBounds(425, 115, 99, 50);
+		ImageIcon imgbutton7 = new ImageIcon("Img/mas.png");
+		Icon imgicon7 = new ImageIcon(imgbutton7.getImage().getScaledInstance(btnAgregar.getWidth(), btnAgregar.getHeight(), Image.SCALE_DEFAULT));
+		btnAgregar.setIcon(imgicon7);
+		btnAgregar.setBackground(Color.WHITE);
 		contentPane.add(btnAgregar);
 		
 		JLabel lblNewLabel = new JLabel("BUSCAR ALUMNO POR:");

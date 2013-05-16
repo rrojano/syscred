@@ -1,4 +1,5 @@
 package mx.uv.syscred;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -15,102 +16,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-
-/*public class IUCredencial extends JFrame
-{
-
-	private JPanel contentPane;	
-	private JLabel labelP;
-
-	public static void main(String[] args) 
-	{
-		EventQueue.invokeLater(new Runnable() 
-		{
-			public void run() 
-			{
-				try 
-				{
-					IUCredencial frame = new IUCredencial();
-					frame.setVisible(true);
-				} catch (Exception e) 
-				{
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-
-	public IUCredencial() 
-	{
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 600, 320);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(null);
-		setContentPane(contentPane);
-		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(0, 0, 574, 193);
-		contentPane.add(panel_1);
-		panel_1.setLayout(null);
-		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(10, 11, 281, 171);
-		panel_1.add(lblNewLabel);
-		File cred = new File("Img/i1.jpg");
-		lblNewLabel.setIcon(new ImageIcon(cred.getPath()));
-		
-		JLabel label = new JLabel("");
-		label.setBounds(283, 11, 281, 171);
-		panel_1.add(label);
-		File cred2 = new File("Img/i2.jpg");
-		label.setIcon(new ImageIcon(cred2.getPath()));
-		
-		JButton btnNewButton = new JButton("Buscar Alumno");
-		btnNewButton.addActionListener(new ActionListener() 
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				IUBuscarAlu IUBA = new IUBuscarAlu();
-				IUBA.show();	
-				dispose();
-			}
-		});
-		btnNewButton.setBounds(34, 204, 188, 23);
-		contentPane.add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("Modificar Datos Institucion");
-		btnNewButton_1.setBounds(236, 204, 188, 23);
-		contentPane.add(btnNewButton_1);
-		
-		JButton btnNewButton_2 = new JButton("Imprimir");
-		btnNewButton_2.setBounds(34, 239, 89, 23);
-		contentPane.add(btnNewButton_2);
-		
-		JButton btnNewButton_3 = new JButton("Salir");
-		btnNewButton_3.addActionListener(new ActionListener() 
-		{
-			public void actionPerformed(ActionEvent e) 
-			{				
-				dispose();
-			}
-		});
-		btnNewButton_3.setBounds(133, 239, 89, 23);
-		contentPane.add(btnNewButton_3);
-				
-		
-		labelP = new JLabel("");
-		labelP.setBounds(246,238,89,23);contentPane.add(labelP);
-		
-	}
-	
-	public void setL (String cadena)
-	{		
-		labelP.setText(cadena);		
-	}
-	
-}*/
 
 public class IUCredencial extends JFrame
 {
@@ -199,15 +104,20 @@ public class IUCredencial extends JFrame
 			}
 		});		
 		btnBuscarAlu.setIcon(imgicon1);
+		btnBuscarAlu.setBackground(Color.WHITE);
 		contentPane.add(btnBuscarAlu);
 		
-		JButton btnNewButton_1 = new JButton("");
-		btnNewButton_1.setBounds(1010, 475, 136, 76);
-		contentPane.add(btnNewButton_1);
+		JButton btnModificar = new JButton("");
+		btnModificar.setBounds(1010, 475, 136, 76);
+		ImageIcon imgbutton5 = new ImageIcon("Img/modificar.png");
+		Icon imgicon5 = new ImageIcon(imgbutton5.getImage().getScaledInstance(btnModificar.getWidth(), btnModificar.getHeight(), Image.SCALE_DEFAULT));
+		btnModificar.setIcon(imgicon5);
+		btnModificar.setBackground(Color.WHITE);
+		contentPane.add(btnModificar);
 		
 		JButton btnImprimir = new JButton("");
 		btnImprimir.setBounds(156, 475, 136, 76);
-		ImageIcon imgbutton2 = new ImageIcon("Img/impresora.png");
+		ImageIcon imgbutton2 = new ImageIcon("Img/atras.png");
 		Icon imgicon2 = new ImageIcon(imgbutton2.getImage().getScaledInstance(btnImprimir.getWidth(), btnImprimir.getHeight(), Image.SCALE_DEFAULT));
 		btnImprimir.addActionListener(new ActionListener() 
 		{
@@ -218,14 +128,36 @@ public class IUCredencial extends JFrame
 				String materno = lblMaterno.getText();
 				String seguro = labelP.getText();				
 				reporte = new GenerarReportePDF();
-				reporte.generarReporte(nombre, paterno, materno, seguro);
+				reporte.generarDelantera(nombre, paterno, materno, seguro);
 			}
 		});
 		btnImprimir.setIcon(imgicon2);
+		btnImprimir.setBackground(Color.WHITE);
 		contentPane.add(btnImprimir);
 		
+		
+		JButton btnImprimir2 = new JButton("");
+		btnImprimir2.setBounds(302, 475, 136, 76);
+		ImageIcon imgbutton4 = new ImageIcon("Img/atras.png");
+		Icon imgicon4 = new ImageIcon(imgbutton2.getImage().getScaledInstance(btnImprimir2.getWidth(), btnImprimir2.getHeight(), Image.SCALE_DEFAULT));
+		btnImprimir2.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				String nombre = lblNombre.getText();
+				String paterno = lblPaterno.getText();
+				String materno = lblMaterno.getText();
+				String seguro = labelP.getText();				
+				reporte = new GenerarReportePDF();
+				reporte.generarTrasera(nombre, paterno, materno, seguro);
+			}
+		});
+		btnImprimir2.setIcon(imgicon4);
+		btnImprimir2.setBackground(Color.WHITE);
+		contentPane.add(btnImprimir2);
+		
 		JButton btnSalir = new JButton("");
-		btnSalir.setBounds(302, 475, 136, 76);
+		btnSalir.setBounds(448, 475, 136, 76);
 		ImageIcon imgbutton3 = new ImageIcon("Img/salir.png");
 		Icon imgicon3 = new ImageIcon(imgbutton3.getImage().getScaledInstance(btnSalir.getWidth(), btnSalir.getHeight(), Image.SCALE_DEFAULT));
 		btnSalir.addActionListener(new ActionListener() 
@@ -236,13 +168,20 @@ public class IUCredencial extends JFrame
 			}
 		});
 		btnSalir.setIcon(imgicon3);
+		btnSalir.setBackground(Color.WHITE);
 		contentPane.add(btnSalir);
+		
+		
+		
+		JLabel label = new JLabel("Imprimir parte trasera");
+		label.setBounds(302, 562, 136, 14);
+		contentPane.add(label);
 		
 		JLabel lblBuscar = new JLabel("Buscar alumno");
 		lblBuscar.setBounds(10, 562, 136, 14);
 		contentPane.add(lblBuscar);
 		
-		JLabel lblImprimir = new JLabel("Imprimir credencial");
+		JLabel lblImprimir = new JLabel("Imprimir parte frontal");
 		lblImprimir.setBounds(156, 562, 136, 14);
 		contentPane.add(lblImprimir);
 		
@@ -251,7 +190,7 @@ public class IUCredencial extends JFrame
 		contentPane.add(lblModi);
 		
 		JLabel lblSalir = new JLabel("Salir");
-		lblSalir.setBounds(302, 562, 136, 14);
+		lblSalir.setBounds(448, 562, 136, 14);
 		contentPane.add(lblSalir);
 		
 	}
