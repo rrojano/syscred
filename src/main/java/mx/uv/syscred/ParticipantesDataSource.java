@@ -14,25 +14,25 @@ public class ParticipantesDataSource implements JRDataSource
 	{
 		 Object valor = null;
 		 
-		 if("nombre".equals(jrf.getName()))
+		 if("Nombre".equals(jrf.getName()))
 		 {
 			 valor = listaAlumnos.get(indice).getNombre();
 		 }
 		 else
 		 {
-			 if("paterno".equals(jrf.getName()))
+			 if("Apaterno".equals(jrf.getName()))
 			 {
 				 valor = listaAlumnos.get(indice).getApaterno();
 			 }
 			 else
 			 {
-				 if("materno".equals(jrf.getName()))
+				 if("Amaterno".equals(jrf.getName()))
 				 {
 					 valor = listaAlumnos.get(indice).getAmaterno();
 				 }
 				 else
 				 {
-					 if("nseguro".equals(jrf.getName()))
+					 if("Nseguro".equals(jrf.getName()))
 					 {
 						 valor = listaAlumnos.get(indice).getNSeguro();
 					 }
