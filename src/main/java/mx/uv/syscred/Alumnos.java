@@ -6,10 +6,20 @@ public class Alumnos
 	private String Amaterno;
 	private String Nombre;
 	private String NSeguro;
+	private String foto;
 	
 	public Alumnos()
 	{
 		
+	}
+	
+	public Alumnos(String Apaterno, String Amaterno, String Nombre, String NSeguro, String foto)
+	{
+		this.Amaterno = Amaterno;
+		this.Apaterno = Apaterno;
+		this.Nombre = Nombre;
+		this.NSeguro = NSeguro;
+		this.foto = foto;
 	}
 	
 	public Alumnos(String Apaterno, String Amaterno, String Nombre, String NSeguro)
@@ -17,7 +27,17 @@ public class Alumnos
 		this.Amaterno = Amaterno;
 		this.Apaterno = Apaterno;
 		this.Nombre = Nombre;
-		this.NSeguro = NSeguro;
+		this.NSeguro = NSeguro;		
+	}
+
+	public String getFoto() 
+	{
+		return foto;
+	}
+
+	public void setFoto(String foto) 
+	{
+		this.foto = foto;
 	}
 
 	public String getApaterno() 

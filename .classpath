@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="C:/Users/Luis Zavaleta/Desktop/jasperreports-5.0.0/lib/commons-collections-2.1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Luis Zavaleta/Desktop/jasperreports-5.0.0/lib/commons-digester-2.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Luis Zavaleta/Desktop/jasperreports-5.0.0/lib/groovy-all-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Luis Zavaleta/git/syscred/libs/opencsv-2.3.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
