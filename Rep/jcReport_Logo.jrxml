@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="jcReport_Logo" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="logo" class="java.io.InputStream"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="163" splitType="Stretch">
+			<staticText>
+				<reportElement x="207" y="10" width="255" height="31"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPRESA NACIONAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="41" width="270" height="31"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DE INCOMUNICACIÓN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="207" y="76" width="336" height="1" forecolor="#FF0000"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="362" y="86" width="200" height="18"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA["Otra alternativa es necesaria!!!"]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="195" height="160"/>
+				<imageExpression class="java.io.InputStream"><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="14" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="345" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="13" y="4" width="549" height="31" backcolor="#999900"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INGRESOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="40" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2011]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="40" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2010]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="40" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2009]]></text>
+			</staticText>
+			<line>
+				<reportElement x="13" y="59" width="549" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="262" y="64" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[84500.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="64" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[215400.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="64" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[1000.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="80" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[860.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="80" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[770080.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="80" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[120.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="96" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[8983.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="96" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[900.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="96" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[8870.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="112" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[300.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="112" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[12300.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="112" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[4500.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="64" width="249" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Afiliados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="80" width="249" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Donaciones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="96" width="249" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Promociones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="112" width="249" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subvenciones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="137" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[454500.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="137" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[331230.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="137" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[23300.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="137" width="249" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="245" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[88780.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="277" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2083.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="221" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2010]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="293" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2300.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="277" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[3870.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="245" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[3400.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="261" width="249" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gastos x P]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="245" width="249" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gasto corriente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="261" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[34080.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="318" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[271160.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="221" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2011]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="261" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[3460.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="221" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2009]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="261" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[120.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="277" width="249" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gastos extraordinarios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="293" width="249" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Otros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="318" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[876500.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="277" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[1900.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="293" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[5500.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="245" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[55600.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="293" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[12300.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="318" width="249" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="318" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[71300.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="13" y="184" width="549" height="31" backcolor="#999900"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GASTOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="13" y="240" width="549" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="12" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="23" splitType="Stretch"/>
+	</summary>
+</jasperReport>

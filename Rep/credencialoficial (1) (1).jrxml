@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ann" language="groovy" pageWidth="252" pageHeight="155" orientation="Landscape" columnWidth="252" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="364b81e2-d42b-48f6-8be0-0e646e3cc58f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="logo" class="java.io.InputStream"/>
+	<field name="Nombre" class="java.lang.String"/>
+	<field name="Apaterno" class="java.lang.String"/>
+	<field name="Amaterno" class="java.lang.String"/>
+	<field name="direccion" class="java.lang.String"/>
+	<field name="curp" class="java.lang.String"/>
+	<field name="Nseguro" class="java.lang.String"/>
+	<title>
+		<band height="155" splitType="Stretch">
+			<textField>
+				<reportElement uuid="782f2272-62c2-41df-9b5d-d4dedc48433d" x="156" y="13" width="42" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="04427506-2ed3-4db9-a2e7-5e5ad0f9a702" x="156" y="29" width="60" height="12"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Apaterno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="61a2ee95-4bbc-4d6d-b9a2-922f7115bbf0" x="155" y="49" width="70" height="12"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amaterno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2608b7b8-5c96-47df-9593-14f0ec03b391" x="156" y="109" width="86" height="14"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="feecf1d9-553a-46c7-b965-346397dde520" x="156" y="70" width="68" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{curp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="27da81c8-f17a-4744-91f9-c0626e6dc553" x="158" y="91" width="55" height="11"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nseguro}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="cf6b2d23-fbd4-4898-aecb-23c3b56b2e8c" x="14" y="19" width="114" height="106"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+</jasperReport>

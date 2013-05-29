@@ -1,4 +1,6 @@
 package mx.uv.syscred;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,29 +16,34 @@ public class GenerarReportePDF
 	private String paterno;
 	private String materno;
 	private String seguro;
-	//private final String foto = "Rep/123456789.jpg";
-	private final String logotipo="reportes/logo.jpg";
-    
+    private String logotipo = "logo.jpg";
     public void generarDelantera(String nombre, String paterno, String materno, String seguro, String foto)
     {    	
     	this.nombre = nombre;
     	this.paterno = paterno;
     	this.materno = materno;
     	this.seguro = seguro;
-    	//this.foto = foto;
         ParticipantesDataSource dataSource = new ParticipantesDataSource();
         Alumnos alumno = new Alumnos(paterno, nombre,materno, seguro);        
         dataSource.addAlumno(alumno);
                 
         try
-        
         {
+            Map<String, Object> logo = new HashMap<String, Object>(); 
+            //logo.put("logo", new ByteArrayInputStream(logotipo.getBytes("UTF-8")));
             
-            Map<String, Object> p = new HashMap<String, Object>();        
-            p.put("logo", this.getClass().getResourceAsStream("logo.jpg"));            
-        	System.out.println(p.toString());
-    	  	String fileJasper = "jcReport_Logo.jasper";
-            JasperPrint print = JasperFillManager.fillReport(fileJasper, p, dataSource);
+            /*String msj = logotipo;
+        	InputStream input = null;
+        	StringBuffer StringBuffer1 = new StringBuffer(msj);
+        	input = new ByteArrayInputStream(StringBuffer1.toString().getBytes("UTF-8"));
+        	logo.put("logo", input);*/
+            
+            logo.put("logo", this.getClass().getResourceAsStream("//java//mx//uv//syscred//BD//logo.jpg"));
+          
+        	System.out.println(logo);
+    	  	String fileJasper = "Rep/jcReport_Logo.jasper";
+    	  	System.out.println(fileJasper);
+            JasperPrint print = JasperFillManager.fillReport(fileJasper, logo, dataSource);
             JasperViewer jviewer1 = new JasperViewer (print,false);
             jviewer1.setBounds(0,0,700,600);
             jviewer1.setVisible(true);
