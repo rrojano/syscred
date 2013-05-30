@@ -103,7 +103,8 @@ public class IUCredencial extends JFrame
 		lblImgAtras = new JLabel("");
 		lblImgAtras.setBounds(601, 11, 600, 442);
 		panel_Credencial.add(lblImgAtras);
-		ImageIcon imgAtras = new ImageIcon("Img/i111.png");
+		//ImageIcon imgAtras = new ImageIcon("Img/i111.png");
+		ImageIcon imgAtras = new ImageIcon("i111.png");
 		Icon icono2 = new ImageIcon(imgAtras.getImage().getScaledInstance(lblImgAtras.getWidth(), lblImgAtras.getHeight(), Image.SCALE_DEFAULT));
 		lblImgAtras.setIcon(icono2);
 		this.repaint();

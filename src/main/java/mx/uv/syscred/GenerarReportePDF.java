@@ -41,7 +41,7 @@ public class GenerarReportePDF
             logo.put("logo", this.getClass().getResourceAsStream("//java//mx//uv//syscred//BD//logo.jpg"));
           
         	System.out.println(logo);
-    	  	String fileJasper = "Rep/jcReport_Logo.jasper";
+    	  	String fileJasper = "Rep/jcReport_Logo.jasper";        	
     	  	System.out.println(fileJasper);
             JasperPrint print = JasperFillManager.fillReport(fileJasper, logo, dataSource);
             JasperViewer jviewer1 = new JasperViewer (print,false);
